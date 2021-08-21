@@ -12,11 +12,11 @@ In addition to reading the assigned material and class notes,  I also researched
 ### Researching web resources for exception handling 
 While there are many resources on the web, the following resources  were particularly useful for learning about error and exception handling.
 
-“Exception Handling”: [External link](https://www.learnpython.org/en/Exception_Handling) (External link).
+“Exception Handling”: [Exception Handling](https://www.learnpython.org/en/Exception_Handling).
 This site includes definitions,  examples  and simple exercises for exception handling, including a simplified example of a try/except block. The site was a good introduction to the topic of error handling, without being overwhelming with detail. 
 
 
- “Python Exceptions: An introduction”: https://realpython.com/python-exceptions/ (External link). Summary and demonstrations of how to handle exceptions in both text and video format.  This is a good advanced-beginner resource for error handling.
+ “Python Exceptions: An introduction”: [Python Exceptions](https://realpython.com/python-exceptions/) . Summary and demonstrations of how to handle exceptions in both text and video format.  This is a good advanced-beginner resource for error handling.
  
 “Errors and Exceptions”: https://docs.python.org/3/tutorial/errors.html#handling-exceptions (External link). Excellent resource for step by step description of how try/except blocks work as well as other error handling information. This is a good detailed reference site with a great deal of information all in one place. 
 
