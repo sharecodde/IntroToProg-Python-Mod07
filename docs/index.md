@@ -18,7 +18,7 @@ This site includes definitions,  examples  and simple exercises for exception ha
 
  “Python Exceptions: An introduction”: [Python Exceptions](https://realpython.com/python-exceptions/) . Summary and demonstrations of how to handle exceptions in both text and video format.  This is a good advanced-beginner resource for error handling.
  
-“Errors and Exceptions”: https://docs.python.org/3/tutorial/errors.html#handling-exceptions (External link). Excellent resource for step by step description of how try/except blocks work as well as other error handling information. This is a good detailed reference site with a great deal of information all in one place. 
+“Errors and Exceptions”: [Handling Exceptions](https://docs.python.org/3/tutorial/errors.html#handling-exceptions) (External link). Excellent resource for step by step description of how try/except blocks work as well as other error handling information. This is a good detailed reference site with a great deal of information all in one place. 
 
 ### Researching web resources for pickling 
 While there are many resources on the web, the following resources  were particularly useful for learning about pickling. 
