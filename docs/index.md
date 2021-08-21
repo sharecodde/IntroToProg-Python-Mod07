@@ -16,18 +16,18 @@ While there are many resources on the web, the following resources  were particu
 This site includes definitions,  examples  and simple exercises for exception handling, including a simplified example of a try/except block. The site was a good introduction to the topic of error handling, without being overwhelming with detail. 
 
 
- “Python Exceptions: An introduction”: [Python Exceptions](https://realpython.com/python-exceptions/) . Summary and demonstrations of how to handle exceptions in both text and video format.  This is a good advanced-beginner resource for error handling.
+ “Python Exceptions: An introduction”: [Python Exceptions](https://realpython.com/python-exceptions/). Summary and demonstrations of how to handle exceptions in both text and video format.  This is a good advanced-beginner resource for error handling.
  
-“Errors and Exceptions”: [Handling Exceptions](https://docs.python.org/3/tutorial/errors.html#handling-exceptions) (External link). Excellent resource for step by step description of how try/except blocks work as well as other error handling information. This is a good detailed reference site with a great deal of information all in one place. 
+“Errors and Exceptions”: [Handling Exceptions](https://docs.python.org/3/tutorial/errors.html#handling-exceptions). Excellent resource for step by step description of how try/except blocks work as well as other error handling information. This is a good detailed reference site with a great deal of information all in one place. 
 
 ### Researching web resources for pickling 
 While there are many resources on the web, the following resources  were particularly useful for learning about pickling. 
 
- “Python Pickling”: https://www.tutorialspoint.com/python-pickling (External link). Provides a succinct definition and examples of pickling. The site was a good introduction to the topic of pickling, without being overwhelming with detail.
+ “Python Pickling”: [Python Pickling](https://www.tutorialspoint.com/python-pickling). Provides a succinct definition and examples of pickling. The site was a good introduction to the topic of pickling, without being overwhelming with detail.
  
-“ Python Pickle Module for saving objects (serialization)”: https://www.youtube.com/watch?v=2Tw39kZIbhs (External link). Easy to follow simple youtube example of pickling.
+“ Python Pickle Module for saving objects (serialization)”:[Pickle Serialization](https://www.youtube.com/watch?v=2Tw39kZIbhs). Easy to follow simple youtube example of pickling.
 
-“The Python Pickle Method: How to Persist Objects in Python”: https://realpython.com/python-pickle-module/  (External link). Provides additional information on how pickling fits in to serialization and deserializtion and why you would want to do this. Easy to understand description and examples both in text and video format. This is a good advanced-beginner resources for pickling. A membership is needed to review some material.
+“The Python Pickle Method: How to Persist Objects in Python”: [Python Pickle](https://realpython.com/python-pickle-module/). Provides additional information on how pickling fits in to serialization and deserializtion and why you would want to do this. Easy to understand description and examples both in text and video format. This is a good advanced-beginner resources for pickling. A membership is needed to review some material.
 
 ## Script that demonstrates structured error handling and pickling
 In preparation to write a Python script for this assignment, I created a new project in PyCharm that used Documents/_PythonClass/Assignment07 as its location and a title of  “Assignment07.py”.   The script incorporates both error handling and pickling. It allows the user to document results of a trout species survey.  The program allows the user to add, and view trout species and the number of fish observed in a trout survey. I first developed the error handling portions of the script and then added the pickling method. 
