@@ -56,7 +56,7 @@ strChoice = "" # A Capture the user option selection
 strFileName = "MyFish.txt"  # The name of the data file
 pickleFile = "MyPickle.txt" # The name of another data file used with pickling
 ```
-#### *Figure 1. Showing the header of the script and variable identification*  
+##### *Figure 1. Showing the header of the script and variable identification*  
 
 
 
@@ -80,7 +80,7 @@ class IO:
             print(row["Fish"] + "   " +"("+ row["Number"]+")")
         print("=" * 50)
 ```
-#### *Figure 2. Showing the IO class and the print_current_Fish function*  
+##### *Figure 2. Showing the IO class and the print_current_Fish function*  
 
 ### The main script
 I next developed the main part of the script starting with an introduction of the program to the user as well as importing pickle to use later in the script (Figure 3).  
