@@ -225,6 +225,9 @@ input()
 To run the script, I “right-clicked” in PyCharm and selected the Run command. I followed the prompts to input the user information and the script ran as expected. When the program starts, information is displayed to the user along with an error message if the data file is not found (Figure 10).
 
 <img width="622" alt="Figure 10" src="https://user-images.githubusercontent.com/88258750/130313665-a6283da2-f58b-4f61-b3bd-3ee36f255603.png">. 
+
+![Figure10a](https://user-images.githubusercontent.com/88258750/130335603-d9373ad3-edf7-4ef2-8d34-912cb975e211.png)
+
 #### *Figure 10 . The first part of the script introduces the script and displays a file not found message along with options for the user*   
 
 
