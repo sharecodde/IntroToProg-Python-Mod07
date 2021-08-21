@@ -100,7 +100,7 @@ print("="*60)
 print("Trout species  (number)")
 print("."*60)
 ```
-#### *Figure 3. Code that introduces the program to the user*  
+##### *Figure 3. Code that introduces the program to the user*  
 
 The next part of the script loads the data from a file and checks for two errors using a try/except block.  The first error is to check to see if there is any information in the file; this is the IndexError.  The next error is to check to see that a text file exists; this is the FileNotFoundError (Figure 4).
 ```
@@ -121,7 +121,7 @@ except FileNotFoundError as e: #check to see if there is a file
           "\nusing option 2 in the menu below.\n")
     input('Press the [Enter] key to display the main menu.')
 ```
-#### *Figure 4. Showing try/except block to check for errors when loading data from the file*  
+##### *Figure 4. Showing try/except block to check for errors when loading data from the file*  
  
  
  The next part of the code presents a menu to the user. Once the user selects one of six choices, the menu directs the user to the appropriate part of the program (Figure 5)
@@ -143,38 +143,44 @@ while (True):
     if (strChoice.strip() == '1'):
         IO.print_current_Fish(lstTable)
 ```  
-#### *Figure 5. Showing the menu that is presented to the user*  
+##### *Figure 5. Showing the menu that is presented to the user*  
 
 
 This next part of the script, option 2, allows the user to add a fish species to the trout survey record (Figure 6).  Once the user enters one of four possible trout species, the script checks for a correct entry.  If an input error is made, a message is displayed to the user and they are directed back to the main menu.  The next part of the script asks for the number of fish that were caught during the survey.  The program checks for a numeric entry and offers the user another opportunity to input a numeric entry.  The user will be returned to the main menu if a second entry error is made.  
 ```
-   elif (strChoice.strip() == '2'):
+    # Step 6 - Add a new fish to the list/Table, Menu choice 2
+    elif (strChoice.strip() == '2'):
+        # captures user input for a trout species
         strFish = str(input("\nEnter one of the following trout species => rainbow, cutthroat, brown, bull: "))
         if strFish.lower() == "rainbow" or strFish.lower() == "cutthroat" or strFish.lower() == "brown"\
                 or strFish.lower() == "bull": #checks for a valid entry
             print("-",strFish,"- trout species will be entered into the Trout Survey Record")
-        else:
+        else: # Displays error message to user for invalid entry
             print("**Trout species not found. Please check your entry**")
             input('Press the [Enter] key to return to the main menu.')
             continue
+
+        # captures user input for number of fish caught
         strNumber = str(input("Enter the number of " + "-" +strFish + "- trout caught during the survey: "))
-        if strNumber.isnumeric():
+        if strNumber.isnumeric(): # checks to see that a numeric value was entered
             dicRow = {"Fish": strFish,"Number": strNumber}
             lstTable.append(dicRow)
             print("The trout species: " + "-" + strFish + "- has will be entered in the survey record and you caught:  " + strNumber)
             input('Press the [Enter] key to return to the main menu.')
-        else:
+        else: # displays a message to the user if a non-numeric value was entered
             print("**Please double check your entry and enter a number.**")
+
+            # gives the user another chance to enter a numeric value
             strNumber = str(input("Enter the number of " + strFish + " trout caught during the survey: "))
             if strNumber.isnumeric():
                 dicRow = {"Fish": strFish, "Number": strNumber}
                 lstTable.append(dicRow)
                 print("The trout species: " + strFish + ",  " + "has been entered in the survey record and you caught:  " + strNumber)
-            else:
+            else: #displays a message to the  user if a non-numeric value was entered and sends them to the menu
                 input('***Hmmm, let\'s try again. Press the [Enter] key to return to the main menu.**')
         continue
 ```
-#### *Figure 6. Option 2, adding a fish to the survey record*  
+##### *Figure 6. Option 2, adding a fish to the survey record*  
 
 
 Menu option 5 utilizes the pickle.dump method to write binary data into a file (Figure 7); this is also known as serializing data.  The script also prints the information that was stored in the file by calling the IO function print_current_Fish.
@@ -187,7 +193,7 @@ Menu option 5 utilizes the pickle.dump method to write binary data into a file (
         IO.print_current_Fish(lstTable)
         input('Press the [Enter] key to return to the main menu.')
  ```
-#### *Figure 7. Code demonstrating the pickle.dump method*  
+##### *Figure 7. Code demonstrating the pickle.dump method*  
 
 
 Menu option 6 reads the data back from the file using pickle.load (Figure 8).  The data is also displayed back to the user. 
@@ -200,7 +206,7 @@ Menu option 6 reads the data back from the file using pickle.load (Figure 8).  T
         IO.print_current_Fish(objFileData)
         input('Press the [Enter] key to return to the main menu.')
 ```
-#### *Figure 8. Code demonstrating reading data using pickle.load*  
+##### *Figure 8. Code demonstrating reading data using pickle.load*  
 
 
 The final portions of the script exit the program, menu choice 6, and print information back to the user (Figure 9).
@@ -217,7 +223,7 @@ IO.print_current_Fish(lstTable)
 print("\nThank you for helping conserve trout, presss 'enter' to end the program.")
 input()
 ```
-#### *Figure 9. Code demonstrating exiting the program and displaying  a message to the user*  
+##### *Figure 9. Code demonstrating exiting the program and displaying  a message to the user*  
 
 
 ## Running the script
@@ -225,9 +231,7 @@ To run the script, I “right-clicked” in PyCharm and selected the Run command
 
 <img width="622" alt="Figure 10" src="https://user-images.githubusercontent.com/88258750/130313665-a6283da2-f58b-4f61-b3bd-3ee36f255603.png">. 
 
-![Figure10a](https://user-images.githubusercontent.com/88258750/130335603-d9373ad3-edf7-4ef2-8d34-912cb975e211.png)
-
-#### *Figure 10 . The first part of the script introduces the script and displays a file not found message along with options for the user*   
+##### *Figure 10 . The first part of the script introduces the script and displays a file not found message along with options for the user*   
 
 
 
@@ -236,7 +240,7 @@ The next part of the program displays a menu to the user (Figure 11).
 
  <img width="453" alt="Figure 11" src="https://user-images.githubusercontent.com/88258750/130313896-c09ff42a-dec7-40be-853c-926e02105a6c.png"> 
  
-#### *Figure 11. Script run showing menu of options*  
+##### *Figure 11. Script run showing menu of options*  
 
 
 
@@ -245,14 +249,14 @@ When the user selects option 2, they can enter one of four trout species as well
 
 <img width="698" alt="Figure 12" src="https://user-images.githubusercontent.com/88258750/130314003-1ae0f6da-c2e0-4ffa-a241-f794f81b9f3e.png">  
 
-#### *Figure 12. Script run showing option “2”, as well as error messages to the user*  
+##### *Figure 12. Script run showing option “2”, as well as error messages to the user*  
 
 
 
 ### Menu option 1
  <img width="450" alt="Figure 13" src="https://user-images.githubusercontent.com/88258750/130314015-733765a6-9715-4aec-ab3a-1804aaa39916.png">  
  
-#### *Figure 13. Script run showing option “1”, the current data*   
+##### *Figure 13. Script run showing option “1”, the current data*   
 
 
 
@@ -261,7 +265,7 @@ Menu option 4 shows the data that is stored through the pickle method (Figure 14
 
 <img width="527" alt="Figure 14" src="https://user-images.githubusercontent.com/88258750/130314030-6b955fbe-9642-404a-b64a-155e7d2aca93.png">
  
-#### *Figure 14. Script run showing option “4”, the pickle.dump method*  
+##### *Figure 14. Script run showing option “4”, the pickle.dump method*  
 
 
 
@@ -270,7 +274,7 @@ Menu option 5 shows the data retrieved through pickle.load (Figure 15).
 
 <img width="448" alt="Figure 15" src="https://user-images.githubusercontent.com/88258750/130314045-a1ad4aef-6e40-4ac5-b3a0-49e9052acd31.png">  
 
-#### *Figure 15. Script run showing option “5”, pickle load*  
+##### *Figure 15. Script run showing option “5”, pickle load*  
 
 
 
@@ -278,7 +282,7 @@ Menu option 5 shows the data retrieved through pickle.load (Figure 15).
 Menu option 6 exits the program and displays a message to the user (Figure 16).
 <img width="592" alt="Figure 16" src="https://user-images.githubusercontent.com/88258750/130314065-e1f2628d-077c-4876-9de9-5e880163b9c7.png">  
  
-#### *Figure 16. Script run showing option “6”, exit the program and show a summary*  
+##### *Figure 16. Script run showing option “6”, exit the program and show a summary*  
 
 
 
@@ -288,7 +292,7 @@ To confirm that the program was writing to the  data files correctly, the “MyF
 <img width="183" alt="Figure 17A" src="https://user-images.githubusercontent.com/88258750/130314117-8eec4bda-723c-4e1b-8fbd-1f52217b637b.png">
 <img width="378" alt="Figure 17" src="https://user-images.githubusercontent.com/88258750/130314090-bc226aab-94c8-4e03-a5c5-e27b86248473.png">
 
-#### *Figure 17. Showing the MyFish.txt and the MyPickle.txt data files*  
+##### *Figure 17. Showing the MyFish.txt and the MyPickle.txt data files*  
 
 
 ## Saving and documenting my work
