@@ -4,7 +4,7 @@
  *Assignment 07* 
 
 ## Introduction 
-In this assignment I will discuss my approach to learning and applying the knowledge I gained about error handling, pickling, and    developing GitHub web pages. This assignment includes a summary of helpful resources found on the web and provides a script that applies error handling and pickling.  The script allows the user to document results of a trout species survey.  The program allows the user to add, and view trout species and the number of fish observed in a trout survey. The program also has provisions to utilize pickling functions to store and retrieve the trout survey data.
+In this assignment I will discuss my approach to learning and applying the knowledge I gained about error handling, pickling, and    developing GitHub web pages. This assignment includes a summary of helpful resources found on the web and provides a Python script that incorporates error handling and pickling.  The script allows the user to document results of a trout species survey.  The program allows the user to add, and view trout species and the number of fish observed in a trout survey. The program also has provisions to utilize pickling functions to store and retrieve the trout survey data.
 
 ## Researching exception handling and pickling in Python
 In addition to reading the assigned material and class notes,  I also researched several websites to learn more about error and exception handling and pickling in Python. To help find quality websites on the topic, I first researched websites that we have previously utilized in the Foundations of Programming class, and then expanded my search to other sites.  Below is an annotated summary of the sites I found most useful at explaining the subjects along with my rationale for why I drew that conclusion. 
@@ -12,17 +12,17 @@ In addition to reading the assigned material and class notes,  I also researched
 ### Researching web resources for exception handling 
 While there are many resources on the web, the following resources  were particularly useful for learning about error and exception handling.
 
-“Exception Handling” :  https://www.learnpython.org/en/Exception_Handling (external link).
-This site includes definitions,  examples  and simple exercises for exception handling, including a simplified example of try/except block. The site was a good introduction to the topic of error handling, without being overwhelming with detail.
+“Exception Handling” :  https://www.learnpython.org/en/Exception_Handling (External link).
+This site includes definitions,  examples  and simple exercises for exception handling, including a simplified example of a try/except block. The site was a good introduction to the topic of error handling, without being overwhelming with detail.
 
- “Python Exceptions: An introduction”: https://realpython.com/python-exceptions/ (external link). Summary and demonstrations of how to handle exceptions in both text and video format.  This is a good advanced-beginner resources for error handling.
+ “Python Exceptions: An introduction”: https://realpython.com/python-exceptions/ (External link). Summary and demonstrations of how to handle exceptions in both text and video format.  This is a good advanced-beginner resource for error handling.
  
-“Errors and Exceptions”: https://docs.python.org/3/tutorial/errors.html#handling-exceptions (external link). Excellent resource for step by step description of how try/except blocks work as well as other error handling information. This is a good detailed reference site with a great deal of information all in one place. 
+“Errors and Exceptions”: https://docs.python.org/3/tutorial/errors.html#handling-exceptions (External link). Excellent resource for step by step description of how try/except blocks work as well as other error handling information. This is a good detailed reference site with a great deal of information all in one place. 
 
 ### Researching web resources for pickling 
 While there are many resources on the web, the following resources  were particularly useful for learning about pickling. 
 
- “Python Pickling”: https://www.tutorialspoint.com/python-pickling (external link). Provides a succinct definition and examples of pickling. The site was a good introduction to the topic of pickling, without being overwhelming with detail.
+ “Python Pickling”: https://www.tutorialspoint.com/python-pickling (External link). Provides a succinct definition and examples of pickling. The site was a good introduction to the topic of pickling, without being overwhelming with detail.
  
 “ Python Pickle Module for saving objects (serialization)”: https://www.youtube.com/watch?v=2Tw39kZIbhs (External link). Easy to follow simple youtube example of pickling.
 
@@ -32,34 +32,27 @@ While there are many resources on the web, the following resources  were particu
 In preparation to write a Python script for this assignment, I created a new project in PyCharm that used Documents/_PythonClass/Assignment07 as its location and a title of  “Assignment07.py”.   The script incorporates both error handling and pickling. It allows the user to document results of a trout species survey.  The program allows the user to add, and view trout species and the number of fish observed in a trout survey. I first developed the error handling portions of the script and then added the pickling method. 
 
 ### Header and variables
-I included a script header as well as a brief description of the code (Figure 1).  I identified the variables that I would use in the script .
+I included a script header as well as a brief description of the code (Figure 1).  I also identified the variables that I would use in the script .
 ```
-#----------------------------------------------------------------------------  #
-# Title: Assignment 06
-# Description: Working with functions in a class,
-#              When the program starts, load each "row" of data
-#              in "ToDoToDoList.txt" into a python Dictionary.
-#              Add the each dictionary "row" to a python list "table"
+# Title: Assignment 07
+# Description: Work with error handling utilizing a program that
+#               displays a simple menu to the user. Check for user
+#               input and provide user messages. Demonstrate pickling
+#               through the dump and load methods.
 # ChangeLog (Who,When,What):
-# RRoot,1.1.2030,Created started script
-# RRoot,1.1.2030,Added code to complete assignment 5
-# BGilbertson, 8.11.2021,Added header
-# BGilbertson, 8.12.2021,Added menu print, enter choice, read data and save data code
-# BGilbertson, 8.13.2021,Added enter new task code
-# BGilbertson, 8.14.2021,Added remove task and put the code pieces together
-# BGilbertson, 8.15.2021,More code testing, commenting, and finalizing
-# ---------------------------------------------------------------------------- #
-# Data ---------------------------------------------------------------------- #
-# Declare variables and constants
-strFileName = "ToDoFile.txt"  # The name of the data file
-strCopyOriginal = "ToDoFileCopy.txt" #Captures the original text file that is used for menu option "4"
-objFile = None  # An object that represents a file
-dicRow = {}  # A row of data separated into elements of a dictionary {Task,Priority}
+# BGilbertson, 8.19.2021,Added header and description for Assignment 07
+# BGilbertson, 8.20.2021,Added code for error handling
+# BGilbertson, 8.21.2021,Added code for pickling
+# BGilbertson, 8.22.2021,Added additional comments and code cleanup
+# ------------------------------------------------------------------------ #
+
+# --------Data, declare variables and constants
+objFile =  []   # An object that represents a file
+dicRow = {}    # A row of data separated into elements of a dictionary {Task,Priority}
 lstTable = []  # A list that acts as a 'table' of rows
-strChoice = ""  # Captures the user option selection
-strTask = ""  # Captures the user task data
-strPriority = ""  # Captures the user priority data
-strStatus = ""  # Captures the status of a processing functions
+strChoice = "" # A Capture the user option selection
+strFileName = "MyFish.txt"  # The name of the data file
+pickleFile = "MyPickle.txt" # The name of another data file used with pickling
 ```
 #### *Figure 1. Showing the header of the script and variable identification*  
 
@@ -88,7 +81,7 @@ class IO:
 #### *Figure 2. Showing the IO class and the print_current_Fish function*  
 
 ### The main script
-I next developed the main part of the script starting with an introduction of the program to the user (Figure 3).  
+I next developed the main part of the script starting with an introduction of the program to the user as well as importing pickle to use later in the script (Figure 3).  
 ```
 # Step 1  --- import pickle for program functionality
 import pickle
@@ -269,6 +262,8 @@ Menu option 4 shows the data that is stored through the pickle method (Figure 14
 
 
 ### Menu option 5
+Menu option 5 shows the data retrieved through pickle.load (Figure 15).
+
 <img width="448" alt="Figure 15" src="https://user-images.githubusercontent.com/88258750/130314045-a1ad4aef-6e40-4ac5-b3a0-49e9052acd31.png">  
 
 #### *Figure 15. Script run showing option “5”, pickle load*  
@@ -293,7 +288,7 @@ To confirm that the program was writing to the  data files correctly, the “MyF
 
 
 ## Saving and documenting my work
-I saved the Python script into a folder called “Assignment07” and saved my Python script as Assignment07.py within this folder. I also saved documentation of the assignment in this same folder with the title of “Documentation for Assignment07 Gilbertson.docx”. I created a GitHub webpage utilizing “markdown” language and posted my work on GitHub. I also posted the external link in the Discussion Forum and in this assignment documentation. 
+I saved the Python script into a folder called “Assignment07” and saved my Python script as Assignment07.py within this folder. I also saved documentation of the assignment in this same folder with the title of “Documentation for Assignment07 Gilbertson.docx”. I created a GitHub webpage utilizing “markdown” language and the information provided in the class programming notes; I posted my work on GitHub. I also posted the external link in the Discussion Forum and in this assignment documentation. 
 
  
 ## Summary
